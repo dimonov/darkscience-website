@@ -1,0 +1,10 @@
+digraph {
+        services -> amnesia;
+        amnesia -> services;
+        amnesia -> arc;
+        arc -> amnesia;
+        bitfield -> arc;
+        arc -> bitfield;
+        prorsus -> arc;
+        arc-> prorsus;
+}

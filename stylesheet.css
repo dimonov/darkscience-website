@@ -21,7 +21,7 @@ body {
 	padding : 0 0 30px 0;
 	text-align : center;
 	color : rgb(220,220,220);
-	background : rgb(0,0,0) url('./images/background_repeat.gif');
+	background : rgb(0,0,0) url('./images/background_repeat.jpg');
 	font : normal 12px Verdana, sans-serif, "Times New Roman";
 }
 
@@ -65,7 +65,6 @@ hr {
 	font-weight : bold;
 }
 .running {
-	font-variant: small-caps;
 	text-transform: lowercase;
 }
 .center {
@@ -201,6 +200,26 @@ hr {
 	background : rgb(40,40,40);
 	color : rgb(230,230,230);
 }
+/* library-related element properties */
+#container #main .lib table {
+	text-align : left;
+	width : 100%;
+}
+
+#container #main .lib .status tr.bold {
+	text-align : center;
+	font-weight : bold;
+}
+
+#container #main .lib .status tr.alt td {
+	text-align : center;
+}
+
+body#status #container #main .lib:hover {
+	background : inherit;
+	color : inherit;
+}
+/*  end library-related element properties */
 
 #container #main .sec .status td {
 	width : 17%;
@@ -245,19 +264,25 @@ body#status #container #main .sec:hover {
 	background : inherit;
 	color : inherit;
 }
-
-body#status #container #main h1 {
-	padding-left: 1em;
-}
-
 /* End #main element properties */
 
 /* Begin navigation properties */
 body#home #container #nav a.home,
 body#info #container #nav a.info,
 body#status #container #nav a.status,
+body#stat #container #nav a.stat,
 body#links #container #nav a.links,
 body#snm #container #nav a.snm,
+body#vpn #container #nav a.vpn,
+body#irpg #container #nav a.irpg,
+body#wargames #container #nav a.wargames,
+body#contact #container #nav a.contact,
+body#paste #container #nav a.paste,
+body#faq #container #nav a.faq,
+body#staff #container #nav a.staff,
+body#history #container #nav a.history,
+body#bbs #container #nav a.bbs,
+body#qdb #container #nav a.qdb,
 body#library #container #nav a.library,
 body#articles #container #nav a.articles {
 	background : rgb(40,40,40) url(./images/arrow.gif) no-repeat center right;
@@ -266,6 +291,18 @@ body#articles #container #nav a.articles {
 body#home #container #nav a.home:hover,
 body#info #container #nav a.info:hover,
 body#status #container #nav a.status:hover,
+body#stat #container #nav a.stat:hover,
+body#wargames #container #nav a.wargames:hover,
+body#contact #container #nav a.contact:hover,
+body#paste #container #nav a.paste:hover,
+body#faq #container #nav a.faq:hover,
+body#staff #container #nav a.staff:hover,
+body#history #container #nav a.history:hover,
+body#bbs #container #nav a.bbs:hover,
+body#snm #container #nav a.snm:hover,
+body#vpn #container #nav a.vpn:hover,
+body#irpg #container #nav a.irpg:hover,
+body#qdb #container #nav a.qdb:hover,
 body#links #container #nav a.links:hover,
 body#library #container #nav a.library:hover,
 body#articles #container #nav a.articles:hover {

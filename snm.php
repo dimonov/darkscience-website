@@ -2,10 +2,10 @@
 <html lang='en'>
 
 <head>
-        <title>DarkScience >> SNM</title>
-        <meta http-equiv='content-type' content='text/html; charset=utf-8' />
-        <link rel='shortcut icon' href='./images/favicon.ico' type='image/x-icon' />
-        <link rel='stylesheet' href='./stylesheet.css' type='text/css' media='screen' />
+<?php
+$ds_title = "SNM";
+include "./includes/head.inc.php";
+?>
 </head>
 
 <body id='snm'>
@@ -13,6 +13,12 @@
 	<div id='container'>
 		<div id='header'>
 			<a href='./' id='logo'></a>
+			<div id='quote'>
+			<?php
+			include "./includes/rand_quote.inc.php";
+			printf("%s", quote());
+			?>
+			</div>
 		</div>
 		<?php
 		include './includes/nav.inc.php';
@@ -23,7 +29,7 @@
 			<div class='sec'>
 				<h1>Saturday Night Movie</h1>
 				<h2></h2>
-				<p>The SNM is hosted on Saturdays at 00:00 GMT, please join <code>#drive-in</code> on the irc to talk to like minded cinephiles.</p>
+				<p>The SNM is hosted on Saturdays at 00:00 GMT, please join <a><b>#drive-in</b></a> on the irc to talk to like minded cinephiles.</p>
 				<p>Generally the streaming is a double feature, Suggestions are always open until Friday at 17:00 GMT (the day before the show begins).</p><br />
 				<p>We remind Darkscientists that you must have a registered nick to be able to gain access to the stream. :) -- Thanks, and Enjoy.</p>
 			</div>

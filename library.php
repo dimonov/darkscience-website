@@ -5,10 +5,10 @@ include './includes/libindex0r.php';
 <html lang='en'>
 
 <head>
-        <title>DarkScience >> Library</title>
-        <meta http-equiv='content-type' content='text/html; charset=utf-8' />
-        <link rel='shortcut icon' href='./images/favicon.ico' type='image/x-icon' />
-        <link rel='stylesheet' href='./stylesheet.css' type='text/css' media='screen' />
+<?php
+$ds_title = "Library";
+include "./includes/head.inc.php";
+?>
 </head>
 
 <body id='library'>
@@ -16,6 +16,12 @@ include './includes/libindex0r.php';
 	<div id='container'>
 		<div id='header'>
 			<a href='./' id='logo'></a>
+			<div id='quote'>
+			<?php
+			include "./includes/rand_quote.inc.php";
+			printf("%s", quote());
+			?>
+			</div>
 		</div>
 		<?php
 		include './includes/nav.inc.php';
@@ -24,10 +30,10 @@ include './includes/libindex0r.php';
 			<div class='sec'>
 				<h1>Library</h1>
 				<h2></h2>
-				<p>This page contains papers and documents that we consider useful or interesting, ranging from topics like computer architecture / engineering to computer security and exploitation.</p>
+				<p>This page contains papers and documents that we consider useful or interesting, ranging from topics like computer architecture / engineering to computer security and exploitation. We currently accept papers which are academic, and / or research oriented.</p>
 				<br />
 			</div>
-					<div class='main'>
+					<div class='lib'>
 					<?php
 					$index0r = new index0r;
 					$index0r->init();

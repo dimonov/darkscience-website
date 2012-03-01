@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /staff.php
+Disallow: /vpn.php
+Disallow: /contact.php
+Disallow: /history.php
+Disallow: /quotes.php
+Disallow: /~dimonov/

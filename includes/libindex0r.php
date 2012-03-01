@@ -76,7 +76,8 @@ define('INDEX0RVERSION', '1.0');
 	define("index0rHTMLTitle", "Index of ");
 	
 	// This is the name of the root directory link.
-	define("index0rIndexTitle", 'Index');
+//	define("index0rIndexTitle", 'Index');
+	define("index0rIndexTitle", 'Library');
 	
 	// Width of <table>
 //	define("index0rTableWidth", '50%');
@@ -96,18 +97,19 @@ define('INDEX0RVERSION', '1.0');
 	// Example 1: :http://domain.com/directory
 	// Example 2: http://domain.com/directory/index0r.php
 	// NO trailing slash
-//	define("index0rHomepage", '.');
-	define("index0rHomepage", 'http://darkscience.ws/library.php');
+	define("index0rHomepage", '/library.php');
 	
 	// If homepage and url to file are different. Exmple: homepage is
 	// http://user.com/public/files but directory_root is //user.com/downloads
 	// if directory root and homepage are the same file_url should be the same as
 	// homepage.
 	// NO trailing slash
-	define("index0rFileUrl", 'http://darkscience.ws/files');
+//	define("index0rFileUrl", 'http://darkscience.ws/files');
+	define("index0rFileUrl", './files');
 	
 	// http path to index0r_lib
-	define("index0rLibPath", './index0r_lib');
+	define("index0rLibPath", './includes/index0r_lib');
+//	define("index0rLibPath", './index0r_lib');
 	
 	// http path to images
 	define("index0rImgSrc", index0rLibPath.'/index0r_img');
@@ -164,6 +166,7 @@ define('INDEX0RVERSION', '1.0');
 						'iso' => 'iso.png',
 						'rpm' => 'rpm.png',
 						'pdf' => 'adobe_pdf.png',
+						'ps'  => 'ps.png',
 						'xls' => 'excel.png',
 						'wmv' => 'video.png',
 						'wav' => 'video.png',
@@ -826,7 +829,7 @@ class index0r {
 	function slice_and_dice () {
 		$str = $this->current_dir;
 		// slice up the directory path and add links
-		$cheese = "<a href=\"" . $this->homepage . "?dir=\" class=\"index0rPathLink\">Index</a>";
+		$cheese = "<a href=\"" . $this->homepage . "?dir=\" class=\"index0rPathLink\">" . index0rIndexTitle . "</a>";
 		$directory_stack = "";
 
 		// remove root dir

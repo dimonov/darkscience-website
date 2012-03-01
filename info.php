@@ -2,10 +2,10 @@
 <html lang='en'>
 
 <head>
-        <title>DarkScience >> Info</title>
-        <meta http-equiv='content-type' content='text/html; charset=utf-8' />
-        <link rel='shortcut icon' href='./images/favicon.ico' type='image/x-icon' />
-        <link rel='stylesheet' href='./stylesheet.css' type='text/css' media='screen' />
+<?php
+$ds_title = "Info";
+include "./includes/head.inc.php";
+?>
 </head>
 
 <body id='info'>
@@ -13,6 +13,12 @@
 	<div id='container'>
 		<div id='header'>
 			<a href='./' id='logo'></a>
+			<div id='quote'>
+			<?php
+			include "./includes/rand_quote.inc.php";
+			printf("%s", quote());
+			?>
+			</div>
 		</div>
 		<?php
 		include './includes/nav.inc.php';
@@ -61,8 +67,7 @@
 				<div class='irc'>
 					<p>Once you have your IRC client, use the following commands to get connected to the server:</p>
 					<ul>
-						<li><div class='pop'>/server irc.darkscience.ws <span>To connect without SSL encryption.</span></div></li>
-						<li><div class='pop'>/server irc.darkscience.ws +6697 <span>To connect with SSL encryption.</span></div></li>
+						<li><div class='pop'>/server irc.darkscience.ws +6697 <span>To connect (with SSL encryption by default).</span></div></li>
 						<li><div class='pop'>/join #channel <span>Where #channel can be any channel that is listed in the IRC Channels section below.</span></div></li>
 					</ul>
 					<br />
@@ -80,59 +85,54 @@
 					</ul>
 					<br />
 				</div>
-				<p>Step 4. Being secure.</p>
+				<p>Step 4. Notes on SSL.</p>
 				<br />
 				<div class='irc'>
-					<p>DarkScience has SSL on port 6697. If you are running the XChat IRC client, you must check the option "Allow invalid SSL Certificates" as Darkscience uses its own certificate authority.</p>
+					<p>DarkScience is an SSL-only network. If you are running the XChat IRC client, you must check the option "Allow invalid SSL Certificates" as Darkscience uses CACert, which may or may not be included with your operating system. This may not be necessary if your operating system already comes with the CACert root certificate. View their inclusion status <a href="http://wiki.cacert.org/InclusionStatus">here</a>. Additionally, server-server links within the IRC network are encrypted with SSL as well, to prevent eavesdropping at all points in the network. Server public keys use at least 4096-bit public keys.</p>
 				</div>
-			</div>
-			<div class='sec'>
-				<h1>IRC Servers</h1>
-				<h2></h2>
-				<p>DarkScience has several linked IRC servers. Some of them are operated by DarkScience, while some are maintained by linked communities.</p>
-				<br />
-				<ul>
-					<li>irc.darkscience.ws : Central Hub -- Operated by DarkScience.</li>
-					<li>diamond.darkscience.ws : Diamond Link -- Operated by DarkScience.</li>
-				</ul>
 			</div>
 			<div class='sec'>
 				<h1>IRC Channels</h1>
 				<h2></h2>
 				<p>Official Channels:</p>
 				<ul>
-					<li class='pop'><span><code>#darkscience</code> -- Main network community channel.</span></li>
-					<li><code>#bots</code> -- For bot development and testing. No malicious bots!</li>
+					<li class='pop'><code>#darkscience</code> -- DarkScience network community channel.</li>
+					<li class='pop'><code>#sector5d</code> -- Sector5D community channel.</li>
+					<li class='pop'><span><code>#drive-in</code> -- Playing movies every saturday night.</span></li>
+					<li class='pop'><span><code>#IdleRPG</code> -- Idler RPG game channel.</span></li>
+					<li class='pop'><span><code>#firehose</code> -- Syndicated news - tech, politics, and more.</span></li>
 					<li><code>#vhost</code> -- Set up and activate custom hostmasks.</li>
-					<li><code>#firehose</code> -- Syndicated news - tech, politics, and more.</li>
+					<li><code>#help</code> -- Network related help.</li>
 				</ul>
+				
 				<br />
 				<p>Other Groups:</p>
 				<ul>
-					<li class='pop'><span><code>#wargaming</code> -- http://wargaming.org - WarGaming security challenge &amp; tech community</span></li>
+					<li><span><code>#netxs</code> -- NetXS Phreaking community.</span></li>
 				</ul>
+			
 				<br />
 				<p>*Popular channels are marked with a blue bullet.</p>
 			</div>
 			<div class='sec'>
 				<h1>Source Code</h1>
 				<h2></h2>
-				<p>DarkScience releases the source code for the server software used.</p>
+				<p>DarkScience releases the source code for the website.</p>
 				<ul>
-					<li><a href='https://www.gitorious.org/darkscience-website'>DarkScience Website</a></li>
-					<li><a href='https://www.gitorious.org/wargaming-irc'>WGIRCd and libirc</a></li>
-					<li><a href='https://www.gitorious.org/wargaming-website'>Wargaming Website</a></li>
+					<li class='pop'><span><a href='https://www.gitorious.org/darkscience-website'>DarkScience Website</a></span></li>
+					<li class='pop'><span><a href='https://www.gitorious.org/darkscience-website/idlerpg_site'>IdleRPG Website</a></span></li>
+					<li class='pop'><span><a href='https://github.com/kylef/paste'>Paste</a></span></li>
 				</ul>
 			</div>
 			<div class='sec'>
 				<h1>DarkScience Staff</h1>
 				<h2></h2>
 				<ul>
-					<li class='pop'><span>Dijit - SysAdmin - Arc | Network Administrator</span></li>
-					<li class='pop'><span>dimonov - Server Admin - Diamond | Network Administrator</span></li>
-					<li>Omelette - IRC administrator | Organizational Specialist</li>
+					<li class='pop'><span>Dijit - System Administrator - Arc | Global Administrator</span></li>
+					<li class='pop'><span>kylef - SysOp - Amnesia | Network Administrator</span></li>
+					<li class='pop'><span>dimonov - SysOp at Bitfield | Network Administrator</span></li>
+					<li>Derecho - SysOp at Prorsus | Local Administrator</li>
 					<li>Yusuke - The Ultimate Lurker | Consultant</li>
-					<li>Shawn - Services Administrator</li>
 				</ul>
 			</div>
 		</div>
